@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hull PHP Examples - Use your own user-base with hull.js</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//hull-js.s3.amazonaws.com/develop/hull.js"></script>
+  <script>
+    Hull.init({
+      orgUrl: 'https://hull-demos.hullapp.io',
+      appId: '51bf3c5f3c923f805f0001ec',
+      userHash: '{{ userHash }}'
+    });
+
+    Hull.widget('hello', {
+      templates: ['hello'],
+      beforeRender: function(data) {
+        data.stringified = JSON.stringify(data.me, null, 2);
+      }
+    });
+  </script>
+
+  {% raw %}
+    <script type="text/x-template" data-hull-template="hello/hello">
+      <p>Hello {{ me.email }}, here is your JSON:</p>
+      <pre>{{ stringified }}</pre>
+    </script>
+  {% endraw %}
+</head>
+<body>
+  <div data-hull-widget="hello"></div>
+</body>
+</html>

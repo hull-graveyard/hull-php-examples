@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hull PHP Examples - Use your own user-base with hull.js</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//hull-js.s3.amazonaws.com/develop/hull.js"></script>
+  <script>
+    Hull.init({
+      orgUrl: 'https://hull-demos.hullapp.io',
+      appId: '51bf3c5f3c923f805f0001ec'
+    });
+
+    Hull.on('hull.auth.*', function() {
+      window.location.reload();
+    });
+  </script>
+</head>
+<body>
+  {% if user %}
+    Hey {{ user.name }}
+  {% else %}
+    Hey stranger
+  {% endif %}
+
+  <div data-hull-widget="login_button@hull"></div>
+</body>
+</html>

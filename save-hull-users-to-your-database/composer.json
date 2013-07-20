@@ -1,0 +1,15 @@
+{
+    "require": {
+        "php": ">=5.4",
+        "silex/silex": "1.*",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "php-activerecord/php-activerecord": "dev-master",
+        "hull/hull-sdk": "dev-master"
+    },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url":  "git@github.com:hull/hull-php.git"
+      }
+    ]
+}
