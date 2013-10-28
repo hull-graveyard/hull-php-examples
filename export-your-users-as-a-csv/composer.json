@@ -1,0 +1,12 @@
+{
+    "require": {
+        "php": ">=5.4",
+        "hull/hull-sdk": "dev-master"
+    },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url":  "git@github.com:hull/hull-php.git"
+      }
+    ]
+}

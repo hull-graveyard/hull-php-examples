@@ -13,7 +13,7 @@ $hull = new Hull_Client(array(
   'hull' => array(
     'host' => 'https://hull-demos.hullapp.io',
     'appId' => '51bf3c5f3c923f805f0001ec',
-    'appSecret' => '68889ea92eb685b92d9ee08e1d483365'
+    'appSecret' => 'APP_SECRET'
   )
 ));
 

@@ -10,6 +10,7 @@ used in [`Hull.init`](https://github.com/hull/hull-php-examples/blob/master/use-
 ## Requirement
 
 - PHP 5.4
+- composer
 
 ## Install
 

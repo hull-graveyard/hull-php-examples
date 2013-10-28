@@ -13,6 +13,7 @@ and return it.
 
 - PHP 5.4
 - sqlite3
+- composer
 
 ## Install
 
